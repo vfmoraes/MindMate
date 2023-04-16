@@ -81,15 +81,15 @@ Pessoas que tenham ou suspeitam que possuem a doença de Alzheimer em seus vári
 
 ## Personas, Empatia e Proposta de Valor
 
-> ![](images/Persona1.png)
+> ![](images/Persona1.jpg)
 
-> ![](images/Persona2.png)
+> ![](images/Persona2.jpg)
 
-> ![](images/Persona3.png)
+> ![](images/Persona3.jpg)
 
-> ![](images/Persona4.png)
+> ![](images/Persona4.jpg)
 
-> ![](images/Persona5.png)
+> ![](images/Persona5.jpg)
 
 ## Histórias de Usuários
 
