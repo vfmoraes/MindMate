@@ -13,7 +13,7 @@ Projeto realizado com o objetivo de prover o auxílio para o Mal de Alzheimer at
 ## Professores responsáveis
 
 * Ilo Amy Saldanha Rivero
-* Nome completo do professor 2
+* Leonardo Vilela Cardoso
 
 ## Instruções de utilização
 
