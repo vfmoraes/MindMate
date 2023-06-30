@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>Recomendações de Médicos e Clínicas</title>
+  <link rel="stylesheet" type="text/css" href="sprint3.css">
+  <style>
+  
+    body {
+  background-color: #ECD690;
+}
+    form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 100px;
+  background-color: #00DDFF;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+.navbar {
+ background-color: #00DDFF;
+}
+
+h1 {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  color:#ffffff
+}
+
+    h2 {
+      text-align: center;
+      color: #ffffff;
+      font-size: 20px;
+      margin-top: 10px;
+      margin-bottom: 25px;
+      margin-bottom: 25px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+
+    #medicos {
+      background-color: #ECD690;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    #clinicas {
+      background-color: #ECD690;
+      padding: 10px;
+    }
+
+    .imagem-medico,
+    .imagem-clinica {
+      max-width: 300px;
+      margin-right: 10px;
+    }
+  </style>
+  <script>
+   var dados = {
+    "medicos": [
+      {
+        "nome": "Dr. João Silva",
+        "especialidade": "Alzheimer"
+      },
+      {
+        "nome": "Dra. Maria Santos",
+        "especialidade": "Alzheimer"
+      },
+      {
+        "nome": "Dr. Pedro Alves",
+        "especialidade": "Alzheimer"
+      }
+    ],
+    "clinicas": [
+      {
+        "nome": "Mater Dei",
+        "endereco": "Rua A, 123",
+        "telefone": "(11) 1234-5678"
+      },
+      {
+        "nome": "Clínica Santa Maria",
+        "endereco": "Avenida B, 456",
+        "telefone": "(11) 9876-5432"
+      },
+      {
+        "nome": "Clínica Felicio Rocho",
+        "endereco": "Rua C, 789",
+        "telefone": "(11) 2468-1357"
+      }
+    ]
+  };
+  
+  console.log(dados);
+  </script>
+</head>
+<nav class="navbar">
+    <div class="container">
+      <div class="row mx-auto">
+        <img class="img-fluid" src="logodosite.png" alt="Logo do MindMate">
+      </div>
+    </div>
+  </nav> 
+<body>
+  <div id="medicos">
+    
+  <form>
+    <ul>
+      <li>
+        <h1>MÉDICOS RECOMENDADOS</h1>
+        <img src="Médico 1.avif" alt="Imagem Médico 1" class="imagem-medico">
+        Dr. João Silva - Alzheimer
+      </li>
+      <li>
+        <img src="Médica 2.1.avif" alt="Imagem Médico 2" class="imagem-medico">
+        Dra. Maria Santos - Alzheimer
+      </li>
+      <li>
+        <img src="Médico 3.avif" alt="Imagem Médico 3" class="imagem-medico">
+        Dr. Pedro Alves - Alzheimer
+      </li>
+    </ul>
+  </div>
+</form>
+  <div id="clinicas">
+    
+    <form>
+    <ul>
+      <li>
+        <h2>Clínicas Recomendadas</h2>
+        <img src="mater-dei-contorno-1-1024x640.webp" alt="Imagem Clínica 1" class="imagem-clinica">
+        Clínica Mater Dei - Rua A, 123 - (11) 1234-5678
+      </li>
+      <li>
+        <img src="hospital metropolitano.jpg" alt="Imagem Clínica 2" class="imagem-clinica">
+        Clínica Santa Maria - Avenida B, 456 - (11) 9876-5432
+      </li>
+      <li>
+        <img src="hospital-felicio-rocho.webp" alt="Imagem Clínica 3" class="imagem-clinica">
+        Clínica Felicio Rocho - Rua C, 789 - (11) 2468-1357
+      </li>
+    </ul>
+    </form>
+    <script src="sprint3.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+  </div>
+</body>
+</html>
