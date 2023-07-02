@@ -41,7 +41,6 @@ Os membros do grupo são:
   - [Divisão de Papéis](#divisão-de-papéis)
   - [Ferramentas](#ferramentas)
   - [Controle de Versão](#controle-de-versão)
-- [**############## SPRINT 1 ACABA AQUI #############**](#-sprint-1-acaba-aqui-)
 - [Projeto da Solução](#projeto-da-solução)
   - [Tecnologias Utilizadas](#tecnologias-utilizadas)
   - [Arquitetura da solução](#arquitetura-da-solução)
@@ -178,9 +177,9 @@ A equipe está organizada da seguinte maneira:
 - Product Owner: Ilo Amy Saldanha Rivero
 - Equipe de Desenvolvimento
 - Daniel Victor Rocha Costa (Desenvolvedor Front End)
-- Felipe Bragança Godinho  (Designer) 
+- Felipe Bragança Godinho  (Desenvolvedor Front End, Designer) 
 - Maria Eduarda Pinto Martins (Desenvolvedor Front End, Analista de Negócios)
-- Victor Ferraz de Moraes (Desenvolvedor Back End)
+- Victor Ferraz de Moraes (Desenvolvedor Front End)
 - Vitor Alexandre Moreira Amaral (Desenvolvedor Front End)
 
 
@@ -192,7 +191,7 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 |-----------|-------------------------|---------------|
 |Processo de Design Thinkgin  | Miro |  https://miro.com/app/board/uXjVMT7eBnU=/ | 
 |Repositório de código | GitHub | https://github.com/ICEI-PUC-Minas-PMGCC-TI/ti-1-pmg-cc-m-20231-tiaw-mindmate | 
-|Hospedagem do site | Heroku |  https://XXXXXXX.herokuapp.com | 
+|Hospedagem do site | Replit |  https://mindmate.vferraz.repl.co | 
 |Protótipo Interativo | MavelApp | https://marvelapp.com/prototype/9g597ab |
 
 ## Controle de Versão
@@ -201,91 +200,97 @@ Para gestão do código fonte do software desenvolvido pela equipe, o grupo util
 
 > ![Github-Workflow](images/Github-Workflow.png)
 
-# **############## SPRINT 1 ACABA AQUI #############**
-
-
 # Projeto da Solução
-
-......  COLOQUE AQUI O SEU TEXTO ......
 
 ## Tecnologias Utilizadas
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Descreva aqui qual(is) tecnologias você vai usar para resolver o seu
-> problema, ou seja, implementar a sua solução. Liste todas as
-> tecnologias envolvidas, linguagens a serem utilizadas, serviços web,
-> frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-> Apresente também uma figura explicando como as tecnologias estão
-> relacionadas ou como uma interação do usuário com o sistema vai ser
-> conduzida, por onde ela passa até retornar uma resposta ao usuário.
-> 
-> Inclua os diagramas de User Flow, esboços criados pelo grupo
-> (stoyboards), além dos protótipos de telas (wireframes). Descreva cada
-> item textualmente comentando e complementando o que está apresentado
-> nas imagens.
+Foram utilizadas as linguagens HTML5, CSS3 e Javascript para o desenvolvimento web, com o auxílio do Framework Bootstrap para responsividade. Toda parte de desenvolvimento foi feito na IDE Visual Studio Code e a hospedagem foi feita utilizando o Replit.
 
 ## Arquitetura da solução
 
-......  COLOQUE AQUI O SEU TEXTO E O DIAGRAMA DE ARQUITETURA .......
+> ![](images/arquitetura.png)
 
-> Inclua um diagrama da solução e descreva os módulos e as tecnologias
-> que fazem parte da solução. Discorra sobre o diagrama.
-> 
-> **Exemplo do diagrama de Arquitetura**:
-> 
-> ![Exemplo de Arquitetura](images/arquitetura-exemplo.png)
+A solução implementada conta com os seguintes módulos:
+- Navegador - Interface básica do sistema 
+- Páginas Web - Conjunto de arquivos HTML, CSS, JavaScript e imagens que implementam as funcionalidades do sistema.
+- Local Storage - armazenamento mantido no Navegador, onde são implementados bancos de dados baseados em JSON. São eles: 
+- Clínicas - local onde mostram as clínicas próximas.
+- Maps - parte da qual o usuário pode ver onde estão as clínicas mais próximas de sua localidade atual.
+- Login - área na qual tanto o usuário quanto o profissional da saúde podem criar e entrar em suas contas.
+- Google Maps API - plataforma que permite o acesso às notícias exibidas no site.
+- Hospedagem - local na Internet onde as páginas são mantidas e acessadas pelo navegador. 
 
 
 # Avaliação da Aplicação
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Apresente os cenários de testes utilizados na realização dos testes da
-> sua aplicação. Escolha cenários de testes que demonstrem os requisitos
-> sendo satisfeitos.
+O processo de realização dos testes da solução desenvolvida está documentado na seção que se segue e traz os planos de testes de software e de usabilidade, na sequência, o registro dos testes realizados.
 
 ## Plano de Testes
 
-......  COLOQUE AQUI O SEU TEXTO ......
+| Caso de Teste  | CT-01              |
+|-----------|----------------------------------------|
+|Requisitos associados  | RF-01 -Espaço para entrar na conta. Caso não tenha uma conta cadastrada. Aplica-se o RF2. RF-02 - Link para cadastro de conta. | 
+|Objetivo do Teste | Verificar se com os dados passados para login o acesso a conta do usuário é permitido. | 
+|Passos | 1) Acessar o Navegador 2) Informar na página de login usuário e senha 3) Ir para página de menu principal 4) Caso não tenha conta cadastrada, clique em criar conta. | 
+|Critérios de Êxito | Deve haver uma requisição dos dados do usuário mantidos no navegador pelo Local storage. Em caso de criação de conta dados devem ser salvos em formato JSON para o local storage do navegador. Login efetuado com sucesso. Cadastro realizado com sucesso |
 
-> Enumere quais cenários de testes foram selecionados para teste. Neste
-> tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo
-> de usuários que foi escolhido para participar do teste e as
-> ferramentas utilizadas.
-> 
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
+| Caso de Teste  | CT-02 - Visualizar menu              |
+|-----------|----------------------------------------|
+|Requisitos associados  | RF-03 - O site deve permitir ao usuário após realizar o login de acesso exibir o menu com as funcionalidades do app | 
+|Objetivo do Teste | Verificar se após o login o usuário é direcionado para o menu | 
+|Passos | 1) Acessar o Navegador 2) Entra na conta 3) Visualizar a página do menu | 
+|Critérios de Êxito | A página deve apresentar todas as funcionalidades contempladas pelo app. |
 
-## Ferramentas de Testes (Opcional)
+| Caso de Teste  | CT-03 - Funcionalidades da página principal              |
+|-----------|----------------------------------------|
+|Requisitos associados  | RF-04 - O site deve possibilitar ao usuário alterar seu dados, voltar para o menu, em caso de acesso a uma funcionalidade e entrar no canal de comunicação através de ícones na parte superior do site | 
+|Objetivo do Teste | Verificar se os requisitos 04 estão de acordo com a proposta | 
+|Passos | 1) Acessar o Navegador 2) Entra na conta 3) Visualizar a página do menu 4)Escolher entre acessar Canal de Comunicação, voltar para o menu, ou clicar no ícone de usuário para alterar dados  | 
+|Critérios de Êxito | A página responde ao comandos do usuário, direcionando ele para as respectivas páginas que ele deseja acessar |
 
-......  COLOQUE AQUI O SEU TEXTO ......
+> ![](images/CT1.png)
 
-> Comente sobre as ferramentas de testes utilizadas.
-> 
-> **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+> ![](images/CT2.png)
+
+> ![](images/CT3.png)
+
+> ![](images/CT32.png)
 
 ## Registros de Testes
 
-......  COLOQUE AQUI O SEU TEXTO ......
+| Teste U-1  | TU1 - Teste para definir grau de Alzheimer              |
+|-----------|----------------------------------------|
+|Público  | Usuários que desejam ter uma noção em qual nível da doença se enquadram. | 
+|Objetivo do Teste | Saber se após todas as perguntas o app informa com base nas respostas o nível em que o usuário se encontra. Após mostrar o nível, dar sugestões do que fazer. E na parte inferior possui um botão de refazer o quiz caso o usuário queira. | 
+|Passos | 1) Acessar o Navegador 2) Entra na conta 3) Visualizar a página do menu 4)Visualizar “Faça o teste” 5)Clicar em “Clique aqui” 6)Responder ao questionário 7)Ao final, caso queira refazer o teste clique em “refazer” | 
 
-> Discorra sobre os resultados do teste. Ressaltando pontos fortes e
-> fracos identificados na solução. Comente como o grupo pretende atacar
-> esses pontos nas próximas iterações. Apresente as falhas detectadas e
-> as melhorias geradas a partir dos resultados obtidos nos testes.
+| Teste U-2  | TU2 - Exercícios Cognitivos              |
+|-----------|----------------------------------------|
+|Público  | Após a realização do teste, os usuários que quiserem podem jogar dentre 4 jogos disponíveis no site, cada um com objetivos diferentes. | 
+|Objetivo do Teste | Confirmar se após clicar em “Clique aqui e comece a fazer” os usuários são direcionados para a página que contém os 4 jogos cognitivos. Além disso, saber se ao clicar no jogo desejado o usuário recebe uma mensagem acerca  dos benefícios que tal jogo tem para a mente. | 
+|Passos | 1) Acessar o Navegador 2) Entra na conta 3) Visualizar a página do menu 4)Visualizar “Clique aqui e comece a fazer” 5)Escolher um jogo e clica-lo 6)Clicar no link de acesso do jogo | 
+
+| Teste U-3  | TU3 - Rotas para Clínicas              |
+|-----------|----------------------------------------|
+|Público  | Funcionalidade para o usuário que  deseja saber de locais próximos a sua residência que fornecem cuidados para pessoas com Alzheimer e as rotas para tal lugar. | 
+|Objetivo do Teste | Confirmar se após clicar em “Clique aqui e encontre já” os usuários são direcionados para a página que contém espaço para eles digitarem seu cep, para que o mapa mostre os locais de cuidado próximos e as rotas possíveis. | 
+|Passos | 1) Acessar o Navegador 2) Entra na conta 3) Visualizar a página do menu 4)Visualizar “Clique aqui e encontre já” 5)Digitar o cep 6)Selecionar um local e clicar em rotas | 
+
+| Teste U-4  | TU4 - Indicações Médicas              |
+|-----------|----------------------------------------|
+|Público  | Usuários que queiram saber de bons médicos e os locais que eles trabalham. | 
+|Objetivo do Teste | Confirmar se após clicar em “Clique aqui para acessar” os usuários são direcionados para a página que contém n números de médicos recomendados, junto do endereço das clínicas que eles atendem | 
+|Passos | 1) Acessar o Navegador 2) Entra na conta 3) Visualizar a página do menu 4)Visualizar “Clique aqui para acessar” 5) Escolher um profissional e ver local do hospital ou clínica | 
+
+| Teste U-5  | TU5 - Ajuda              |
+|-----------|----------------------------------------|
+|Público  | Usuários que tenham dúvidas sobre algo no site | 
+|Objetivo do Teste | Levar os usuários para uma página de dúvidas frequentes | 
+|Passos | 1) Acessar o Navegador 2) Entra na conta 3) Visualizar a página do menu 4)Visualizar campo “Ajuda” | 
 
 
 # Referências
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Inclua todas as referências (livros, artigos, sites, etc) utilizados
-> no desenvolvimento do trabalho.
-> 
-> **Links Úteis**:
-> - [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
-> - [Referências Bibliográficas da ABNT](https://comunidade.rockcontent.com/referencia-bibliografica-abnt/)
+- Littlefield, A. Guia da metodologia ágil e scrum para iniciantes. 2016. Disponível em: https://blog.trello.com/br/scrum-metodologia-agil. Acessado em 26/05/2020.
+- Canaltech, Televisão aumenta risco de Alzheimer em idosos. 2022. Disponível em: https://canaltech.com.br/saude/televisao-aumenta-risco-de-alzheimer-em-idosos-228144/. Acessado em 26/10/2022
+- alz.org, Alzheimer e demência no Brasil. Disponível em: https://canaltech.com.br/saude/televisao-aumenta-risco-de-alzheimer-em-idosos-228144/. Acessado em 15/04/2023
